@@ -1,1 +1,41 @@
-style.css
+body {
+	/*background: #DEDEDE;*/
+	position: absolute;
+	font-family: Roboto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+	
+	#donate-button {
+		width: 200px;
+		height: 60px;
+		margin-top: 80px;
+		border: 1px solid #DEDEDE;
+		background-color: #782168;
+		color: #fff;
+		font-family: "Roboto";
+		font-size: 25px;
+		font-weight: 200;
+		padding-bottom: 10px;
+		border-radius: 3px;
+	}
+		#donate-button:hover {
+			color: #F98816;
+			cursor: pointer;
+		}
+		#donate-button:active {
+			position: relative;
+			top: 1px;
+		}
+		#donate-button:focus {
+			outline: 0;
+		}
+
+	#jg-logo {
+		height: 50px;
+		margin-bottom: -14px;
+		margin-left: -20px;
+	}

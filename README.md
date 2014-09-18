@@ -1,6 +1,8 @@
 js-popup
 --------
 
+[![Code Climate](https://codeclimate.com/github/jamieallen59/js-popup/badges/gpa.svg)](https://codeclimate.com/github/jamieallen59/js-popup)
+
 A JavScript popup to prompt people to donate to a cause.
 
 They should be able to:
