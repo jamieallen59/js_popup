@@ -4,7 +4,7 @@ function Donation() {
 }
 
 Donation.prototype.contribution = function(amount_donated) {
-	this.currentAmount += amount_donated;
+	this.currentAmount + amount_donated;
 	this.currentSupporters += 1;
 };
 

@@ -79,7 +79,14 @@
 					    });
 						});
 
+					$('.donation-options').on('submit', function(event){
+						event.preventDefault();
+						donation.contribution($('#donation-input').val());
+						// console.log(donation.currentAmount);
+						$.get($('#donation-input').val());
 					});
+
+				});
 
 		</script>
 </body>

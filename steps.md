@@ -47,6 +47,11 @@ Added jquery.modal.js plus css file
 
 Added background fade effect to the on the modal and tidied up the CSS
 
+Using JQuery/AJAX:
+- Prevented default action of donate button (within the modal)
+- grabbed amount entered into the input field
+
+I was unable to send the information to the page using AJAX and have the number update. As this information is coming from the page itsef and not an external API for example, it needs a server or database and a controller to handle the requests.
 
 
 
