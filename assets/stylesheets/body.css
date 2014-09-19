@@ -1,0 +1,52 @@
+body {
+	position: absolute;
+	font-family: Roboto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	flex-direction: column;
+}
+	
+	#donate-button {
+		width: 200px;
+		height: 54px;
+		margin-top: 30px;
+		border: 1px solid #DEDEDE;
+		background-color: #852177;
+		font-family: "Roboto", "Helvetica Neue", Helvetica;
+		font-size: 25px;
+		font-weight: 200;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 2px;
+		border-radius: 3px;
+	}
+		#donate-button:active {
+			position: relative;
+			top: 1px;
+		}
+		#donate-button:focus {
+			outline: 0;
+		}
+			#donate-button-text {
+				text-decoration: none;
+				color: #fff;
+			}
+			#donate-button-text:hover {
+				color: #F98816;
+				cursor: pointer;
+			}
+
+	#jg-logo {
+		height: 50px;
+		margin-bottom: -14px;
+		margin-left: -20px;
+	}
+
+	.donation-information {
+		font-family: "Roboto";
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}

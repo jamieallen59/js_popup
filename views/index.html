@@ -1,29 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 
 <head>
 	<title>Donation Prompt</title>
+	<meta charset='utf-8'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic' rel='stylesheet' type='text/css'>
-	<link rel='stylesheet' type='text/css' href='../assets/stylesheets/style.css'>
+	<link rel='stylesheet' type='text/css' href='../assets/stylesheets/body.css'>
+	<link rel='stylesheet' type='text/css' href='../assets/stylesheets/prompt.css'>
 	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/reset.css">
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/jquery.modal.css">
 </head>
 
 <body>
 
-	<button id="donate-button">
-			<img id='jg-logo' src="../assets/images/url.jpg">Donate
-	</button>
+<!-- Displaying the current donation amount -->
+	<section class='donation-information'>
+		Current donations: £<span class="current-amount"></span>
+	</section>
 
+<!-- The donate button -->
+	<section id='donate-button'>
+		<a href="#prompt-modal" rel="modal:open" id='donate-button-text'>
+				<img id='jg-logo' src="../assets/images/url.jpg">Donate
+		</a>
+	</section>
+
+
+	<!-- The modal that will be displayed when the button is pressed -->
+	<section id='prompt-modal' class='donation-prompt-container' style='display: none;'>
+		<h4 class='prompt-header'>
+			£10 could buy a llama
+		</h4>
+		<form class='donation-options'>
+			<input type='text' id='donation-input'/>
+			<button id='confirm-donate'>
+				<section class='button-contents'>
+					<img id='jg-logo-2' src="../assets/images/url.jpg">
+					<p class='donation-text'>
+						Donate<br> with JustGiving
+					</p>
+				</section>
+			</button>
+		</form>
+		<p class='security-text'>
+			<img src='../assets/images/padlock.png' id='padlock'>
+			Donating with JustGiving is fast and secure
+		</p>
+		<p class='current-supporters'>
+			<section class='current-supporters-container'>
+				<span class="current-supporters-count"></span>
+					others have supported this.
+			</section>
+		</p>
+<!-- 		<a href="#" rel="modal:close">Close</a> or press ESC</p> -->
+	</section>
+
+
+<!-- JQuery for the modal and amounts to be displayed -->
 	<script src='../src/Donation.js'></script>
 	<script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
+	<script src='../lib/jquery.modal.min.js'></script>
 		<script>
 			$(document).ready(function() {
-				var donate = new Donation
+				var donation = new Donation();
 
-				console.log('hello!')
+					$('.current-amount').text(donation.currentAmount);
 
+					$('.current-supporters-count').text(donation.currentSupporters);
 
-			});
+					$('#donate-button-text').on('click', function() {
+						donation.contribution(10);
+					});
+
+					$('#donate-button-text').on('click', function() {
+						$('#prompt-modal').modal({
+					        fadeDuration: 300,
+					        fadeDelay: 1
+					    });
+						});
+
+					});
 
 		</script>
 </body>
